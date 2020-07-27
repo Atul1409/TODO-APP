@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+    <script src ="script.js" differ></script>
+    <title>Document</title>
+</head>
+<body ng-app="myApp" ng-controller="todoCtrl">
+
+    <h1>Todo List</h1>
+    <br/>
+    <br/>
+    
+    <form ng-submit="todoAdd()">
+        <input type="text" id="y" ng-model="todoInput" size="50" placeholder="Add New" required ><br /> <br />
+        <input type="submit" id="z" value="Add New">
+    </form>
+    
+    <br>
+    <br /> <br />
+    <div ng-repeat="x in todoList"id="🔥">
+        <input type="checkbox" ng-model="x.done" > <span ng-bind="x.todoText"></span>
+    </div>
+    <br />
+    <p><button id="xy" ng-click="remove()">Remove marked</button></p>
+    
+    <script>
+       
+    var app = angular.module('myApp', []);
+    app.controller('todoCtrl', function($scope) {
+        $scope.todoList = [{todoText:'Cricket', done:false}];
+    
+        $scope.todoAdd = function() {
+            $scope.todoList.push({todoText:$scope.todoInput, done:false});
+            $scope.todoInput = "";
+        };
+    
+        $scope.remove = function() {
+            var oldList = $scope.todoList;
+            $scope.todoList = [];
+            angular.forEach(oldList, function(x) {
+                if (!x.done) $scope.todoList.push(x);
+            });
+        };
+    });
+    </script>
+    </body>
+</html>
