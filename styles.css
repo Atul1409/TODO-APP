@@ -9,7 +9,7 @@ body {
 }
 
 *{
-   
+  margin:0; 
   padding:0;
   outline:none;
    
@@ -41,7 +41,7 @@ h1{
     background-color:#ebf5fc;
     height:35px;
     width:50vw;
-    box-shadow: -2px -2px 5px white, 3px 3px 5px rgba(0, 0, 0, 0.1);
+    box-shadow: -2px -2px 5px white, 3px 3px 5px rgba(0, 0, 0, 0.15);
 }
 #xy{
     border:none;
@@ -50,12 +50,12 @@ h1{
     background-color:#ebf5fc;
     height:35px;
     width:50vw;
-    box-shadow: -2px -2px 5px white, 3px 3px 5px rgba(0, 0, 0, 0.1);
+    box-shadow: -2px -2px 5px white, 3px 3px 5px rgba(0, 0, 0, 0.15);
 }
 
 #🔥{
     background-color:#ebf5fc;
-    box-shadow: -2px -2px 5px white, 3px 3px 5px rgba(0, 0, 0, 0.1);
+    box-shadow: -2px -2px 5px white, 3px 3px 5px rgba(0, 0, 0, 0.15);
     border:none;
     padding:8px;
      margin:7px;
